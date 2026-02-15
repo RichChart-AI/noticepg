@@ -1,37 +1,101 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!-- 문자 인코딩 -->
     <title>부자차트 공지</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
-        body{
-            margin:0;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-            font-family:Arial, sans-serif;
-            background-color:#f8f9fa;
+        /* 전체 기본 설정 */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 40px;
         }
-        .notice-box{
-            background:white;
-            padding:60px 80px;
-            border-radius:12px;
-            box-shadow:0 10px 30px rgba(0,0,0,0.08);
-            text-align:center;
+
+        /* 메인 제목 */
+        .main-title {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 50px;
         }
-        h1{
-            margin:0;
-            font-size:32px;
-            color:#222;
+
+        /* 소제목 */
+        .sub-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
+        /* 각 수업 블록 */
+        .class-section {
+            margin-bottom: 60px; /* 파트 간 간격 */
+        }
+
+        /* 수업 제목 */
+        .class-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* 수업 상세 */
+        .class-detail {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        /* === 로고 영역 === */
+        .logo-area {
+            margin-top: 80px;  /* 공지 내용과 충분한 간격 확보 */
+        }
+
+        .logo-area img {
+            width: 120px;      /* 로고 크기 조절 가능 */
+            height: auto;
         }
     </style>
 </head>
+
 <body>
 
-    <div class="notice-box">
-        <h1>부자차트 공지 입니다</h1>
+    <!-- 메인 제목 -->
+    <div class="main-title">부자차트 공지</div>
+
+    <!-- 소제목 -->
+    <div class="sub-title">수업일정</div>
+
+    <!-- 1번 -->
+    <div class="class-section">
+        <div class="class-title">1. 차트 수업</div>
+        <div class="class-detail">
+            매주 목요일<br>
+            저녁 7시 30분
+        </div>
+    </div>
+
+    <!-- 2번 -->
+    <div class="class-section">
+        <div class="class-title">2. 옵션 기본 수업</div>
+        <div class="class-detail">
+            매주 일요일<br>
+            저녁 7시 30분
+        </div>
+    </div>
+
+    <!-- 3번 -->
+    <div class="class-section">
+        <div class="class-title">3. 라이브 분석</div>
+        <div class="class-detail">
+            주제 : 제로데이옵션<br>
+            매주 화요일<br>
+            밤 10시 30분
+        </div>
+    </div>
+
+    <!-- ===== 하단 로고 영역 ===== -->
+    <div class="logo-area">
+        <img src="RC.png" alt="RC Logo"> <!-- noticepg 저장소 루트에 RC.png 존재해야 함 -->
     </div>
 
 </body>
