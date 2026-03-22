@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8"> <!-- 문자 인코딩 -->
+    <meta charset="UTF-8">
     <title>부자차트 공지</title>
 
     <style>
-        /* 전체 기본 설정 */
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -13,89 +12,126 @@
             padding: 40px;
         }
 
-        /* 메인 제목 */
         .main-title {
             font-size: 42px;
             font-weight: bold;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
 
-        /* 소제목 */
         .sub-title {
             font-size: 28px;
             font-weight: bold;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
-        /* 각 수업 블록 */
-        .class-section {
-            margin-bottom: 60px; /* 파트 간 간격 */
+        /* ===== 바둑판 Grid ===== */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3열 */
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
-        /* 수업 제목 */
+        .class-box {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            min-height: 150px;
+        }
+
         .class-title {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
-        /* 수업 상세 */
         .class-detail {
-            font-size: 20px;
+            font-size: 18px;
             line-height: 1.6;
         }
 
-        /* === 로고 영역 === */
+        /* 로고 */
         .logo-area {
-            margin-top: 80px;  /* 공지 내용과 충분한 간격 확보 */
+            margin-top: 80px;
         }
 
         .logo-area img {
-            width: 120px;      /* 로고 크기 조절 가능 */
+            width: 120px;
             height: auto;
+        }
+
+        /* 모바일 대응 */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* 모바일 1열 */
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- 메인 제목 -->
     <div class="main-title">부자차트 공지</div>
-
-    <!-- 소제목 -->
     <div class="sub-title">수업일정</div>
 
-    <!-- 1번 -->
-    <div class="class-section">
-        <div class="class-title">1. 차트 수업</div>
-        <div class="class-detail">
-            매주 목요일<br>
-            저녁 7시 30분
+    <div class="grid-container">
+
+        <!-- 1 -->
+        <div class="class-box">
+            <div class="class-title">1. 라이브 분석</div>
+            <div class="class-detail">
+                주제 : 제로데이옵션<br>
+                매주 화요일<br>
+                밤 10시 30분
+            </div>
         </div>
+
+        <!-- 2 -->
+        <div class="class-box">
+            <div class="class-title">2. 차트수업</div>
+            <div class="class-detail">
+                매주 수요일<br>
+                저녁 7시 30분
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="class-box">
+            <div class="class-title">3. 옵션 심화 수업</div>
+            <div class="class-detail">
+                매주 목요일<br>
+                저녁 7시 30분<br>
+                4월 9일, 16일만 금요일 변동
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="class-box">
+            <div class="class-title">4. 옵션 기본수업</div>
+            <div class="class-detail">
+                매주 토요일<br>
+                저녁 7시 30분
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="class-box">
+            <div class="class-title">5. 해외선물옵션 심화수업</div>
+            <div class="class-detail">
+                매주 일요일<br>
+                저녁 7시 30분
+            </div>
+        </div>
+
+        <!-- 빈칸 (6번째 칸) -->
+        <div></div>
+
     </div>
 
-    <!-- 2번 -->
-    <div class="class-section">
-        <div class="class-title">2. 옵션 기본 수업</div>
-        <div class="class-detail">
-            매주 일요일<br>
-            저녁 7시 30분
-        </div>
-    </div>
-
-    <!-- 3번 -->
-    <div class="class-section">
-        <div class="class-title">3. 라이브 분석</div>
-        <div class="class-detail">
-            주제 : 제로데이옵션<br>
-            매주 화요일<br>
-            밤 10시 30분
-        </div>
-    </div>
-
-    <!-- ===== 하단 로고 영역 ===== -->
+    <!-- 로고 -->
     <div class="logo-area">
-        <img src="RC.png" alt="RC Logo"> <!-- noticepg 저장소 루트에 RC.png 존재해야 함 -->
+        <img src="RC.png" alt="RC Logo">
     </div>
 
 </body>
